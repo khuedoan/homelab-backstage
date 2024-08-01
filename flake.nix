@@ -14,7 +14,7 @@
         devShells.default = mkShell {
           # https://search.nixos.org
           packages = [
-            nodejs_22
+            nodejs_20
             yarn
           ];
         };
