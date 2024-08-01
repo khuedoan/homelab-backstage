@@ -14,6 +14,7 @@ build: lint node_modules
 	yarn build-image
 
 dev: node_modules
+	docker compose up --detach
 	yarn dev
 
 test:

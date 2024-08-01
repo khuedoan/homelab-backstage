@@ -1,19 +1,5 @@
 services:
-  app:
-    build:
-      context: .
-      dockerfile: packages/backend/Dockerfile
-    environment:
-      POSTGRES_HOST: postgres
-      POSTGRES_PORT: 5432
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres_dev_password
-      BACKEND_SECRET: backstage_dev_secret
-    volumes:
-      - ./app-config.production.yaml:/etc/backstage/config.yaml
+  gitea:
+    image: gitea/gitea:latest
     ports:
-      - 7007:7007
-  postgres:
-    image: postgres:16
-    environment:
-      POSTGRES_PASSWORD: postgres_dev_password
+      - 3001:3000

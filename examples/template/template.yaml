@@ -33,7 +33,7 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - github.com
+              - localhost:3001
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
@@ -47,12 +47,12 @@ spec:
         values:
           name: ${{ parameters.name }}
 
-    # This step publishes the contents of the working directory to GitHub.
+    # This step publishes the contents of the working directory to Gitea.
     - id: publish
       name: Publish
-      action: publish:github
+      action: publish:gitea
       input:
-        allowedHosts: ['github.com']
+        allowedHosts: ['localhost:3001']
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
 
@@ -62,7 +62,7 @@ spec:
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
-        catalogInfoPath: '/catalog-info.yaml'
+        catalogInfoPath: 'catalog-info.yaml'
 
   # Outputs are displayed to the user after a successful execution of the template.
   output:

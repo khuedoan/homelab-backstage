@@ -1,0 +1,41 @@
+app:
+  baseUrl: http://localhost:3000
+
+backend:
+  baseUrl: http://localhost:7007
+  cors:
+    origin: http://localhost:3000
+  database:
+    client: better-sqlite3
+    connection: ':memory:'
+
+integrations:
+  gitea:
+    - host: localhost:3001
+      baseUrl: http://localhost:3001
+      username: gitea_admin
+      password: gitea_dev_password
+
+auth:
+  providers:
+    guest: {}
+
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, API, Resource, Location]
+  locations:
+    - type: file
+      target: ../../catalog-info.yaml
+    - type: file
+      target: ../../examples/entities.yaml
+    - type: file
+      target: ../../examples/template/template.yaml
+      rules:
+        - allow: [Template]
+    - type: file
+      target: ../../examples/org.yaml
+      rules:
+        - allow: [User, Group]
