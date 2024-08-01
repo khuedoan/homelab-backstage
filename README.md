@@ -37,6 +37,18 @@ To start the app:
 make dev
 ```
 
+To build the production container image:
+
+```sh
+make
+```
+
+To run the container image locally:
+
+```sh
+docker compose up
+```
+
 ## Deployment
 
 TBD
