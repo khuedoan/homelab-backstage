@@ -33,7 +33,7 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - localhost:3001
+              - gitea-http.gitea:3000 # TODO dynamic git host?
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
@@ -52,7 +52,8 @@ spec:
       name: Publish
       action: publish:gitea
       input:
-        allowedHosts: ['localhost:3001']
+        allowedHosts:
+          - gitea-http.gitea:3000 # TOOD dynamic git host?
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
 
