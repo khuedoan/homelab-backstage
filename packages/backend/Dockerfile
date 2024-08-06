@@ -25,6 +25,14 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     apt-get update && \
     apt-get install -y --no-install-recommends libsqlite3-dev
 
+# Install TechDocs
+# https://backstage.io/docs/features/techdocs/getting-started#disabling-docker-in-docker-situation-optional
+RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN pip3 install mkdocs-techdocs-core
+
 # From here on we use the least-privileged `node` user to run the backend.
 USER node
 

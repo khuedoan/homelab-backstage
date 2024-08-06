@@ -16,6 +16,10 @@ integrations:
       username: gitea_admin
       password: gitea_dev_password
 
+techdocs:
+  generator:
+    runIn: docker
+
 auth:
   providers:
     guest: {}

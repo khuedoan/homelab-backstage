@@ -16,6 +16,6 @@ backend:
 techdocs:
   builder: local
   generator:
-    runIn: docker
+    runIn: local
   publisher:
     type: local
