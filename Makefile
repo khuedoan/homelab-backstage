@@ -17,5 +17,5 @@ dev: node_modules
 	docker compose up --detach
 	yarn dev
 
-test:
+test: node_modules
 	yarn test:all
