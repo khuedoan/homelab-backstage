@@ -1,5 +1,5 @@
 .POSIX:
-.PHONY: default lint build dev test
+.PHONY: default lint build push dev test
 
 default: build
 
@@ -12,6 +12,9 @@ lint: node_modules
 build: lint node_modules
 	yarn build:backend
 	yarn build-image
+
+push:
+	docker push docker.io/khuedoan/backstage
 
 dev: node_modules
 	docker compose up --detach

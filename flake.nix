@@ -16,6 +16,11 @@
           packages = [
             nodejs_20
             yarn
+
+            # TODO https://github.com/NixOS/nixpkgs/pull/261906
+            # (python3.withPackages (p: with p; [
+            #   mkdocs-techdocs-core
+            # ]))
           ];
         };
       }
