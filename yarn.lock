@@ -3111,35 +3111,6 @@
     qs "^6.9.4"
     react-use "^17.2.4"
 
-"@backstage/plugin-catalog-import@^0.12.1":
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-import/-/plugin-catalog-import-0.12.1.tgz#6f80fb1a7ca95a2b34f31da73396d5bef725324b"
-  integrity sha512-tflt2eNh1GCKPISGrB+Qz3yPKkxb1ETno5/3aK/yPn7R3g/xV9ZLHzpRBcFMwEgw8B5ZT25B4tUasOZljnbKQQ==
-  dependencies:
-    "@backstage/catalog-client" "^1.6.5"
-    "@backstage/catalog-model" "^1.5.0"
-    "@backstage/config" "^1.2.0"
-    "@backstage/core-compat-api" "^0.2.7"
-    "@backstage/core-components" "^0.14.9"
-    "@backstage/core-plugin-api" "^1.9.3"
-    "@backstage/errors" "^1.2.4"
-    "@backstage/frontend-plugin-api" "^0.6.7"
-    "@backstage/integration" "^1.13.0"
-    "@backstage/integration-react" "^1.1.29"
-    "@backstage/plugin-catalog-common" "^1.0.25"
-    "@backstage/plugin-catalog-react" "^1.12.2"
-    "@material-ui/core" "^4.12.2"
-    "@material-ui/icons" "^4.9.1"
-    "@material-ui/lab" "4.0.0-alpha.61"
-    "@octokit/rest" "^19.0.3"
-    "@types/react" "^16.13.1 || ^17.0.0 || ^18.0.0"
-    git-url-parse "^14.0.0"
-    js-base64 "^3.6.0"
-    lodash "^4.17.21"
-    react-hook-form "^7.12.2"
-    react-use "^17.2.4"
-    yaml "^2.0.0"
-
 "@backstage/plugin-catalog-node@^1.12.4":
   version "1.12.4"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-node/-/plugin-catalog-node-1.12.4.tgz#ccc576cbd074a7549400b0918a258828d3d41742"
@@ -9798,7 +9769,6 @@ apg-lite@^1.0.3:
     "@backstage/plugin-catalog" "^1.21.1"
     "@backstage/plugin-catalog-common" "^1.0.25"
     "@backstage/plugin-catalog-graph" "^0.4.7"
-    "@backstage/plugin-catalog-import" "^0.12.1"
     "@backstage/plugin-catalog-react" "^1.12.2"
     "@backstage/plugin-org" "^0.6.27"
     "@backstage/plugin-permission-react" "^0.4.24"
@@ -16175,11 +16145,6 @@ jose@^5.0.0:
   version "5.6.3"
   resolved "https://registry.yarnpkg.com/jose/-/jose-5.6.3.tgz#415688bc84875461c86dfe271ea6029112a23e27"
   integrity sha512-1Jh//hEEwMhNYPDDLwXHa2ePWgWiFNNUadVmguAAw2IJ6sj9mNxV5tGXJNqlMkJAybF6Lgw1mISDxTePP/187g==
-
-js-base64@^3.6.0:
-  version "3.7.7"
-  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-3.7.7.tgz#e51b84bf78fbf5702b9541e2cb7bfcb893b43e79"
-  integrity sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==
 
 js-cookie@^2.2.1:
   version "2.2.1"

@@ -13,6 +13,9 @@ backend:
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
 
+catalog:
+  readonly: true
+
 techdocs:
   builder: local
   generator:
